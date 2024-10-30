@@ -4,6 +4,10 @@
 
 # Tools Used 
 
+|Skills| Demand |
+|------|--------|
+|SQL   |7291    |
+| Excel| 4611  |
 # The Analysis
 ```
 with top_paying_job AS (
