@@ -1,14 +1,25 @@
 # Introduction
-
+In this project, we investigate job postings from 2023, focusing on data analyst roles to uncover valuable insights that can guide job seekers and organizations alike. The analysis aims to shed light on top-paying positions, critical skills for high-rating jobs, in-demand competencies, and optimal skills to learn.
 # Background
+The job market for data analysts continues to grow, driven by the demand for data-driven decision-making across various sectors. This study analyzes job postings to answer the following key questions:
+
+What are the top-paying data analyst jobs?
+What skills are required for high-rating data analyst roles?
+What are the most in-demand skills in data analysis?
+What skills command the highest salaries?
+What are the most optimal skills to learn based on demand and salary?
 
 # Tools Used 
+The analysis is powered by PostgreSQL, VS Code, git and SQL queries, with results processed into visual insights and recommendations.
 
 |Skills| Demand |
 |------|--------|
 |SQL   |7291    |
 | Excel| 4611  |
 # The Analysis
+ Top-Paying Data Analyst Jobs
+
+The top-paying data analyst roles were identified by analyzing average annual salaries across job titles. The highest-paying positions include roles like Director of Analytics and Associate Director roles, with salaries up to 650,000. A bar chart provides a visualization of these top-paying positions, showing clear peaks for high-salary roles.
 ```
 with top_paying_job AS (
     SELECT
