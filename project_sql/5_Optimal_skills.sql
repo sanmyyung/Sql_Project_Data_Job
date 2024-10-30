@@ -1,7 +1,7 @@
 /*
 Question: What are the most optiml skills to learn
 */
-
+/*
 WITH skill_demand AS (
     SELECT
         skills_dim.skill_id,
@@ -41,8 +41,9 @@ ORDER BY
     demand_count DESC,
     salary_avg DESC
 LIMIT 25
+*/
 
-/*
+
 --Rewriting this same query more concisely
 SELECT
     skills_dim.skill_id,
@@ -64,4 +65,3 @@ ORDER BY
     salary_avg DESC,
     demand_count DESC
 LIMIT 25
-*/
