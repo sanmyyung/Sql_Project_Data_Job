@@ -13,7 +13,7 @@ The job market for data analysts continues to grow, driven by the demand for dat
 The analysis is powered by PostgreSQL, VS Code, git and SQL queries, with results processed into visual insights and recommendations.
 
 # The Analysis
- ### Top-Paying Data Analyst Jobs
+ 1. ### Top-Paying Data Analyst Jobs
  
 ![](https://github.com/sanmyyung/Sql_Project_Data_Job/blob/main/output.png)
 
@@ -40,7 +40,7 @@ ORDER BY
 LIMIT 10
 ```
 
-### Skills Required for High-Rating Data Analyst Jobs
+2. ### Skills Required for High-Rating Data Analyst Jobs
 
 High-rating roles often require a specialized skill set. Key skills include SQL, Python, and R, along with advanced tools like Databricks and Azure. These skills are frequently associated with the top-rated roles in data analysis, as represented in the bar chart.
 
@@ -73,7 +73,7 @@ INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 ORDER BY
     salary_year_avg DESC;
 ```
-### Most In-Demand Skills
+3. ### Most In-Demand Skills
 
 Based on demand counts, the top in-demand skills include SQL, Excel, Python, and Tableau, as shown in the table provided. These skills are fundamental across data roles, underscoring their importance for job seekers aiming to stay competitive.
 
@@ -102,7 +102,7 @@ GROUP BY
 ORDER BY demand_count DESC
 LIMIT 10
 ```
-### Top-Paying Skills Based on Salary
+4. ### Top-Paying Skills Based on Salary
 
 Top-paying skills, as shown in the table, include SVN, Solidity, Couchbase, and Golang. These skills command significant salaries, making them attractive for those seeking higher income within data-related fields.
 
@@ -145,7 +145,7 @@ ORDER BY
     salary_year_avg DESC;
 ```
 
-### Optimal Skills to Learn
+5. ### Optimal Skills to Learn
 
 The optimal skills to learn balance both demand and salary, with skills like Python, R, and SAS emerging as highly valuable. These skills offer competitive salaries while remaining in high demand, as demonstrated in the final table
 
