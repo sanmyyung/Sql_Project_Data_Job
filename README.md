@@ -1,5 +1,5 @@
 # Introduction
-In this project, we investigate job postings from 2023, focusing on data analyst roles to uncover valuable insights that can guide job seekers and organizations alike. The analysis aims to shed light on top-paying positions, critical skills for high-rating jobs, in-demand competencies, and optimal skills to learn.
+In this project, we focus on data analyst roles to uncover insights that can benefit job seekers and organizations. By examining job postings from 2023, we aim to highlight top-paying positions, essential skills for high-rating jobs, in-demand competencies, and optimal skills for career development in data analysis.
 # Background
 The job market for data analysts continues to grow, driven by the demand for data-driven decision-making across various sectors. This study analyzes job postings to answer the following key questions:
 
@@ -160,6 +160,33 @@ The optimal skills to learn balance both demand and salary, with skills like Pyt
 | oracle  | 37 | 112948         |
 | sql server| 35 | 97786      |
 
-# Recommendation
+```
+SELECT
+    skills_dim.skill_id,
+    skills_dim.skills,
+    count(skills_job_dim.job_id) as demand_count,
+    round(avg(job_postings_fact.salary_year_avg),0) as salary_avg
+FROM job_postings_fact
+INNER JOIN skills_job_dim on job_postings_fact.job_id = skills_job_dim.job_id
+INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
+WHERE
+    job_title_short = 'Data Analyst'
+    AND salary_year_avg is NOT NULL
+    AND job_work_from_home = TRUE
+GROUP BY
+    skills_dim.skill_id
+having 
+    count(skills_job_dim.job_id) > 10
+ORDER BY
+    salary_avg DESC,
+    demand_count DESC
+LIMIT 25
+```
 
+# Recommendation
+* Skill Development: Focus on learning high-demand and high-salary skills, notably SQL, Python, R, and Tableau, which are vital for competitive positioning in data analysis roles.
+* Specialization: For those targeting top-paying jobs, developing advanced technical proficiencies in tools like Databricks, Azure, and database management systems (such as Couchbase) can lead to substantial income opportunities.
+* Market Awareness: Keeping abreast of shifts in in-demand skills and emerging technologies, like Golang and Solidity, can provide a strategic advantage.
+  
 # Conclusion
+The analysis of 2023 data analyst job postings reveals that while foundational skills like SQL and Python remain essential, specialization in advanced tools and languages can significantly impact salary potential and employability. This study provides actionable insights for data analysts looking to optimize their skillset based on market demand and salary prospects.
