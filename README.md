@@ -19,7 +19,7 @@ The analysis is powered by PostgreSQL, VS Code, git and SQL queries, with result
 
 The top-paying data analyst roles were identified by analyzing average annual salaries across job titles. The highest-paying positions include roles like Director of Analytics and Associate Director roles, with salaries up to 650,000. A bar chart provides a visualization of these top-paying positions, showing clear peaks for high-salary roles.
 
-```
+```sql
 SELECT
     job_id,
     job_title,
@@ -46,7 +46,7 @@ High-rating roles often require a specialized skill set. Key skills include SQL,
 
 ![](https://github.com/sanmyyung/Sql_Project_Data_Job/blob/main/output%20(1).png)
 
-```
+```sql
 with top_paying_job AS (
     SELECT
         job_id,
@@ -88,7 +88,7 @@ Based on demand counts, the top in-demand skills include SQL, Excel, Python, and
 | sas   | 28068 |
 | powerpoint| 13848 |
 
-```
+```sql
 SELECT
     skills,
     count(skills_job_dim.job_id) AS demand_count
@@ -117,7 +117,7 @@ Top-paying skills, as shown in the table, include SVN, Solidity, Couchbase, and 
 | dplyr   | 147633 |
 | vmware| 147500 |
 
-```
+```sql
 with top_paying_job AS (
     SELECT
         job_id,
@@ -160,7 +160,7 @@ The optimal skills to learn balance both demand and salary, with skills like Pyt
 | oracle  | 37 | 112948         |
 | sql server| 35 | 97786      |
 
-```
+```sql
 SELECT
     skills_dim.skill_id,
     skills_dim.skills,
