@@ -3,11 +3,11 @@ In this project, we focus on data analyst roles to uncover insights that can ben
 # Background
 The job market for data analysts continues to grow, driven by the demand for data-driven decision-making across various sectors. This study analyzes job postings to answer the following key questions:
 
-What are the top-paying data analyst jobs?
-What skills are required for high-rating data analyst roles?
-What are the most in-demand skills in data analysis?
-What skills command the highest salaries?
-What are the most optimal skills to learn based on demand and salary?
+1. What are the top-paying data analyst jobs?
+2. What skills are required for high-rating data analyst roles?
+3. What are the most in-demand skills in data analysis?
+4. What skills command the highest salaries?
+5. What are the most optimal skills to learn based on demand and salary?
 
 # Tools Used 
 The analysis is powered by PostgreSQL, VS Code, git and SQL queries, with results processed into visual insights and recommendations.
